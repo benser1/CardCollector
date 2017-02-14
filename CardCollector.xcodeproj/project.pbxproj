@@ -13,6 +13,8 @@
 		BE29647A1E50E54C0042B7FB /* CardCollector.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BE2964781E50E54C0042B7FB /* CardCollector.xcdatamodeld */; };
 		BE29647C1E50E54C0042B7FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE29647B1E50E54C0042B7FB /* Assets.xcassets */; };
 		BE29647F1E50E54C0042B7FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE29647D1E50E54C0042B7FB /* LaunchScreen.storyboard */; };
+		BE2964871E5279F90042B7FB /* PB230073.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BE2964861E5279F90042B7FB /* PB230073.jpg */; };
+		BE2964891E527B130042B7FB /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2964881E527B130042B7FB /* CardViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		BE29647B1E50E54C0042B7FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BE29647E1E50E54C0042B7FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BE2964801E50E54C0042B7FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BE2964861E5279F90042B7FB /* PB230073.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = PB230073.jpg; path = ../../../Pictures/PB230073.jpg; sourceTree = "<group>"; };
+		BE2964881E527B130042B7FB /* CardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,9 +63,11 @@
 				BE2964711E50E54C0042B7FB /* AppDelegate.swift */,
 				BE2964731E50E54C0042B7FB /* ViewController.swift */,
 				BE2964751E50E54C0042B7FB /* Main.storyboard */,
+				BE2964881E527B130042B7FB /* CardViewController.swift */,
 				BE29647B1E50E54C0042B7FB /* Assets.xcassets */,
 				BE29647D1E50E54C0042B7FB /* LaunchScreen.storyboard */,
 				BE2964801E50E54C0042B7FB /* Info.plist */,
+				BE2964861E5279F90042B7FB /* PB230073.jpg */,
 				BE2964781E50E54C0042B7FB /* CardCollector.xcdatamodeld */,
 			);
 			path = CardCollector;
@@ -126,6 +132,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE2964871E5279F90042B7FB /* PB230073.jpg in Resources */,
 				BE29647F1E50E54C0042B7FB /* LaunchScreen.storyboard in Resources */,
 				BE29647C1E50E54C0042B7FB /* Assets.xcassets in Resources */,
 				BE2964771E50E54C0042B7FB /* Main.storyboard in Resources */,
@@ -139,6 +146,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE2964891E527B130042B7FB /* CardViewController.swift in Sources */,
 				BE2964741E50E54C0042B7FB /* ViewController.swift in Sources */,
 				BE2964721E50E54C0042B7FB /* AppDelegate.swift in Sources */,
 				BE29647A1E50E54C0042B7FB /* CardCollector.xcdatamodeld in Sources */,
