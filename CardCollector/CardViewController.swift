@@ -30,10 +30,27 @@ class CardViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         
     }
     
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        let image = info[UIImagePickerControllerOriginalImage] as! UIImage
+        
+        cardImageView.image = image
+        
+        imagePicker.dismiss(animated: true, completion: nil)
+    }
+    
     @IBAction func cameraTapped(_ sender: Any) {
     }
     
     @IBAction func addTapped(_ sender: Any) {
+        
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        
+        let card = Card(context: context)
+        card.title = titleTextField.text
+        card.image = UIImagePNGRepresentation(cardImageView.image!) as NSData?
+        
+        (UIApplication.shared.delegate as! AppDelegate).saveContext()
+        
     }
     
     
