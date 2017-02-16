@@ -15,6 +15,7 @@ class CardViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     @IBOutlet weak var titleTextField: UITextField!
     
     @IBOutlet weak var addupdatebutton: UIButton!
+    
     @IBOutlet weak var deleteButton: UIButton!
     
     var imagePicker = UIImagePickerController()
@@ -53,15 +54,24 @@ class CardViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     }
     
     @IBAction func cameraTapped(_ sender: Any) {
+        imagePicker.sourceType = .camera
+        
+        present(imagePicker, animated: true, completion: nil)
     }
     
     @IBAction func addTapped(_ sender: Any) {
         
-        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        if card != nil {
+            card!.title = titleTextField.text
+            card!.image = UIImagePNGRepresentation(cardImageView.image!) as NSData?
+        } else {
+            let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+            let card = Card(context: context)
+            card.title = titleTextField.text
+            card.image = UIImagePNGRepresentation(cardImageView.image!) as NSData?
+        }
         
-        let card = Card(context: context)
-        card.title = titleTextField.text
-        card.image = UIImagePNGRepresentation(cardImageView.image!) as NSData?
+        
         
         (UIApplication.shared.delegate as! AppDelegate).saveContext()
         
@@ -69,5 +79,14 @@ class CardViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         
     }
     
+    @IBAction func deleteTapped(_ sender: Any) {
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        
+        context.delete(card!)
+        
+        (UIApplication.shared.delegate as! AppDelegate).saveContext()
+        
+        navigationController!.popViewController(animated: true)
+    }
     
 }

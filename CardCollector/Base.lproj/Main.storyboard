@@ -87,6 +87,7 @@
                                 <state key="normal" title="Delete"/>
                                 <connections>
                                     <action selector="addTapped:" destination="vIy-mH-UD3" eventType="touchUpInside" id="TQR-Tc-aUl"/>
+                                    <action selector="deleteTapped:" destination="vIy-mH-UD3" eventType="touchUpInside" id="Bbb-0A-006"/>
                                 </connections>
                             </button>
                         </subviews>
