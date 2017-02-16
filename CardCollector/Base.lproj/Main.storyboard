@@ -38,7 +38,7 @@
                     <navigationItem key="navigationItem" id="2BF-p1-lh4">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="7vU-Af-WED">
                             <connections>
-                                <segue destination="vIy-mH-UD3" kind="show" id="EJ3-o6-FUK"/>
+                                <segue destination="vIy-mH-UD3" kind="show" identifier="cardSegue" id="EJ3-o6-FUK"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -76,21 +76,30 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gm6-gp-gob">
-                                <rect key="frame" x="164" y="334" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <rect key="frame" x="172" y="334" width="30" height="30"/>
+                                <state key="normal" title="Add"/>
                                 <connections>
                                     <action selector="addTapped:" destination="vIy-mH-UD3" eventType="touchUpInside" id="oS5-5i-45X"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vn2-CC-aJH">
+                                <rect key="frame" x="165" y="374" width="45" height="30"/>
+                                <state key="normal" title="Delete"/>
+                                <connections>
+                                    <action selector="addTapped:" destination="vIy-mH-UD3" eventType="touchUpInside" id="TQR-Tc-aUl"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="nog-bx-Xxy" firstAttribute="top" secondItem="xFd-zt-17S" secondAttribute="bottom" constant="20" id="7Hs-Xa-ZQm"/>
+                            <constraint firstItem="Vn2-CC-aJH" firstAttribute="top" secondItem="Gm6-gp-gob" secondAttribute="bottom" constant="10" id="F0C-Wz-Hcw"/>
                             <constraint firstItem="nog-bx-Xxy" firstAttribute="centerX" secondItem="1LJ-cz-old" secondAttribute="centerX" id="Mgq-2a-7J5"/>
                             <constraint firstItem="Gm6-gp-gob" firstAttribute="centerX" secondItem="1LJ-cz-old" secondAttribute="centerX" id="XPE-zm-tnT"/>
                             <constraint firstItem="L3Y-jT-diq" firstAttribute="centerX" secondItem="1LJ-cz-old" secondAttribute="centerX" id="ilv-4V-QVt"/>
                             <constraint firstItem="Gm6-gp-gob" firstAttribute="top" secondItem="L3Y-jT-diq" secondAttribute="bottom" constant="25" id="kST-Ri-OdB"/>
                             <constraint firstItem="L3Y-jT-diq" firstAttribute="width" secondItem="nog-bx-Xxy" secondAttribute="width" id="lOW-YR-eTV"/>
+                            <constraint firstItem="Vn2-CC-aJH" firstAttribute="centerX" secondItem="1LJ-cz-old" secondAttribute="centerX" id="zM7-Ir-QKX"/>
                             <constraint firstItem="L3Y-jT-diq" firstAttribute="top" secondItem="nog-bx-Xxy" secondAttribute="bottom" constant="45" id="znA-od-8Mk"/>
                         </constraints>
                     </view>
@@ -109,7 +118,9 @@
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
+                        <outlet property="addupdatebutton" destination="Gm6-gp-gob" id="IXJ-j2-d4m"/>
                         <outlet property="cardImageView" destination="nog-bx-Xxy" id="BAv-9S-HpX"/>
+                        <outlet property="deleteButton" destination="Vn2-CC-aJH" id="IGt-XB-WVT"/>
                         <outlet property="titleTextField" destination="L3Y-jT-diq" id="Knf-g0-BEg"/>
                     </connections>
                 </viewController>

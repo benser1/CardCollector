@@ -14,12 +14,26 @@ class CardViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     
     @IBOutlet weak var titleTextField: UITextField!
     
+    @IBOutlet weak var addupdatebutton: UIButton!
+    @IBOutlet weak var deleteButton: UIButton!
+    
     var imagePicker = UIImagePickerController()
+    
+    var card : Card? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         imagePicker.delegate = self
+        
+        if card != nil {
+            cardImageView.image = UIImage(data: card!.image as! Data)
+            titleTextField.text = card?.title
+            
+            addupdatebutton.setTitle("Update", for: .normal)
+        } else {
+            deleteButton.isHidden = true
+        }
     }
 
     @IBAction func photosTapped(_ sender: Any) {
