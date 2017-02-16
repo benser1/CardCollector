@@ -62,8 +62,8 @@
 			children = (
 				BE2964711E50E54C0042B7FB /* AppDelegate.swift */,
 				BE2964731E50E54C0042B7FB /* ViewController.swift */,
-				BE2964751E50E54C0042B7FB /* Main.storyboard */,
 				BE2964881E527B130042B7FB /* CardViewController.swift */,
+				BE2964751E50E54C0042B7FB /* Main.storyboard */,
 				BE29647B1E50E54C0042B7FB /* Assets.xcassets */,
 				BE29647D1E50E54C0042B7FB /* LaunchScreen.storyboard */,
 				BE2964801E50E54C0042B7FB /* Info.plist */,
